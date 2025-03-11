@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Accessible Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <nav aria-label="Main Navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
+      <span class="logo">Y/N</span>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
     </nav>
 
-    <div class="container">
-        <h1>Welcome to My Portfolio</h1>
-        <p>This website is designed with accessibility in mind... (or short bio)</p>
-        <button onclick="location.href='portfolio.html'">View My Work</button>
-    </div>
+    <header class="background-image-section">
+      <div class="background-text">
+        <h1>I do <span class="highlight">graphic design</span> & <span class="highlight">code.</span></h1>
+        <button onclick="location.href='portfolio.html'">My Portfolio</button>
+        <button class="contact" onclick="location.href='contact.html'">
+          Get in Touch
+        </button>
+      </div>
+    </header>
 
-</body>
+    <section class="example-student">
+      <h2>Meet the Example Student</h2>
+      <p>
+        Hi, my name is Example Student. I'm a passionate web developer and
+        designer who loves creating accessible and user-friendly digital
+        experiences.
+      </p>
+    </section>
+
+    <section class="contact-info">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+      <p>Socials: <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+    </section>
+  </body>
 </html>
