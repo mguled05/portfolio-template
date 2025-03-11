@@ -1,118 +1,240 @@
+/* Global Styles */
 :root {
-    --primary-color: #4B0082; /* Dark Purple */
-    --secondary-color: #FFD700; /* Gold */
-    --background-color: #FFD700; /* Gold Background */
-    --text-color: #333;
-    --button-hover: #6A0DAD;
+  --primary-color: #4b0082; /* Dark Purple */
+  --secondary-color: #ffd700; /* Gold */
+  --background-color: #ffd700; /* Gold Background */
+  --alt-background-color: #4b0082; /* Alternate Section Background */
+  --text-color: #333;
+  --text-color-light: #ffffff;
+  --button-hover: #6a0dad;
+  --font-size: 1.5em;
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    text-align: center; /* Center all text */
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: var(--font-size);
 }
 
+/* Navigation */
 nav {
-    background-color: var(--primary-color);
-    padding: 1em;
+  background-color: var(--primary-color);
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+nav .logo {
+  position: absolute;
+  left: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--secondary-color);
 }
 
 nav a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
+  color: var(--secondary-color);
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2em;
 }
 
-nav a:hover, nav a:focus {
-    text-decoration: underline;
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
 }
 
-h1, h2 {
-    color: var(--primary-color);
+/* Welcome Section */
+.welcome-section {
+  background: url('/mnt/data/PXL_20250224_220112384.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.container {
-    width: 80%;
-    margin: 20px auto;
-    text-align: center; /* Ensure text stays centered */
+.welcome-section h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.welcome-section .highlight {
+  color: black;
+}
+
+.welcome-section button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--button-hover);
+  color: white;
+  transform: scale(1.05);
+}
+
+
+/* Sections */
+.intro-section {
+  background-color: var(--background-color);
+  padding: 50px;
+}
+
+.example-student {
+  background-color: var(--alt-background-color);
+  color: var(--text-color-light);
+  padding: 50px;
+}
+
+.contact-info {
+  background-color: var(--background-color);
+  padding: 50px;
 }
 
 /* Portfolio Grid */
 .portfolio-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .portfolio-item {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
 }
 
 .portfolio-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .portfolio-item .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(75, 0, 130, 0.8);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-    text-align: center;
-    font-size: 1.2em;
-    padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(75, 0, 130, 0.8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 10px;
 }
 
 .portfolio-item:hover .overlay,
 .portfolio-item:focus .overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
 .portfolio-item:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
+}
+/* Background Image Section */
+.background-image-section {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; /* Ensures text stands out */
+  font-size: 1.8em; /* Reduce font size */
+  font-weight: normal;
+  padding: 20px;
+  overflow: hidden;
 }
 
-button {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    margin-top: 15px;
+/* Background Image */
+.background-image-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://cdn.glitch.global/54bf2918-0a5d-44de-9061-5413de48dbd9/pexels-borisk-6193389.jpg?v=1741498069786') no-repeat center center;
+  background-size: cover;
+  z-index: -2; /* Sends image to the back */
 }
 
-button:hover, button:focus {
-    background-color: var(--button-hover);
-    color: white;
+/* Darker Purple Overlay */
+.background-image-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(75, 0, 90, 0.85); /* Darker Purple Cast */
+  z-index: -1; /* Sits above the image but below the text */
 }
 
-.row {
-  display: flex
+/* Text Styling */
+.background-text {
+  position: relative; /* Ensures text stays above overlay */
+  z-index: 1;
 }
 
-.column{
-  flex:50%
+.background-text h1 {
+  font-size: 2em; /* Reduce size */
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
 }
+
+.background-text .highlight {
+  color: var(--secondary-color); /* Gold */
+}
+
+/* Buttons */
+.background-text button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Smaller padding */
+  font-size: 1em; /* Reduce text size */
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.background-text button:hover,
+.background-text button:focus {
+  background-color: var(--button-hover);
+  color: white;
+  transform: scale(1.05);
+}
+
+
